@@ -1,0 +1,155 @@
+.page {
+  padding-top: 40px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__wrap {
+    max-width: 750px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+
+}
+
+.button {
+  width: calc(100%/3);
+  height: 48px;
+  background-color: $green-shade-color;
+  border: 1px solid $green-dark-color;
+  color: $light-font-color;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+  @media (max-width: 540px) {
+    height: 40px;
+  }
+
+  @media (max-width: 450px) {
+    height: 32px;
+    overflow: hidden;
+  }
+  
+  &:hover {
+    background-color: $green-light-color;
+  }
+
+  &:focus {
+    color: $green-dark-color;
+  }
+
+  &:active {
+    background-color: $green-dark-color;
+  }
+
+  &__text {
+    white-space: nowrap;
+    padding: 7px 0px 7px 35px;
+    color: $light-font-color;
+
+    @media (max-width: 540px) {
+      font-size: 12px;
+      padding: 4px 0px 4px 31px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 10px;
+      padding: 2px 0px 2px 21px;
+    }
+
+    &--one {
+      background-image: url("../img/icon/1.svg");
+      background-repeat: no-repeat;
+      background-size: 30px;
+      background-position: 0% 50%;
+
+      @media (max-width: 540px) {
+        background-size: 26px;
+      }
+  
+      @media (max-width: 450px) {
+        background-size: 14px;
+      }
+    }
+
+    &--two {
+      background-image: url("../img/icon/2.svg");
+      background-repeat: no-repeat;
+      background-size: 30px;
+      background-position: 0% 50%;
+      @media (max-width: 540px) {
+        background-size: 26px;
+      }
+  
+      @media (max-width: 450px) {
+        background-size: 14px;
+      }
+    }
+
+    &--three {
+      background-image: url("../img/icon/3.svg");
+      background-repeat: no-repeat;
+      background-size: 30px;
+      background-position: 0% 50%;
+      @media (max-width: 540px) {
+        background-size: 26px;
+      }
+  
+      @media (max-width: 450px) {
+        background-size: 14px;
+      }
+    }
+
+    &.hidden {
+      background: none;
+      padding-left: 0;
+    }
+  }
+}
+
+.form {
+  &__input {
+    width: 280px;
+    border: 1px solid $green-shade-color;
+    padding: 5px 10px;
+
+    @media (max-width: 450px) {
+      width: 200px;
+      font-size: 12px;
+    }
+  }
+
+  &__btn {
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid $green-shade-color;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+    @media (max-width: 450px) {
+      font-size: 12px;
+    }
+
+    &:hover {
+      background-color: $green-light-color;
+    }
+
+    &:active {
+      background-color: $green-shade-color;
+      color: $light-font-color;
+    }
+
+    &:focus {
+      background-color: transparent;
+      color: $green-light-color;
+    }
+  }
+}

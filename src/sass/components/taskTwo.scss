@@ -1,0 +1,108 @@
+// #canvas {
+//   display: block;
+// }
+
+.progress {
+  &__container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &__circle {
+    position: relative;
+    display: block;
+    height: 200px;
+    width: 200px;
+    transform: rotateZ(-90deg);
+    border-radius: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: #e6beea;
+
+    &:after {
+      content: attr(data-pct)"%";
+      position: absolute;
+      text-align: center;
+      display: block;
+      height: 60px;
+      width: 90px;
+      left: 50%;
+      top: 40%;
+      
+      // margin-top: -25px;
+      // margin-left: -10px;
+      transform: translateY(-50%);
+      transform: rotateZ(-270deg);
+      border-radius: 100%;
+      line-height: 160px;
+      font-size: 2em;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 20px;
+    padding: 7px 15px;
+    background-color: #dadada;
+    border: 1px solid #fb2799;
+    color: #fb2799;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out, border .3s ease-in-out;
+
+    &:hover {
+      background-color: #e6beea;
+    }
+
+    &:focus {
+      border: 1px solid #8300ea;
+    }
+
+    &:active {
+      color: #ffffff;
+      background-color: #fb2799;
+      border: 1px solid #8300ea;
+    }
+
+    &:disabled {
+      color: #5e5e5e;
+      background-color: #dadada;
+      border: 1px solid #5e5e5e;
+    }
+  }
+
+  &__label {
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    border: 1px solid #fb2799;
+    color: #000;
+  }
+
+  &__background{
+    stroke:#dadada;
+  }
+
+  &__gradient{
+    stroke: conic-gradient(from 180deg at 50% 50%, #FB2799 0deg, #8300EA 240deg, rgba(131, 0, 234, 0) 240.04deg, rgba(131, 0, 234, 0) 360deg);
+  }
+}
+
+#svg circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset linear;
+  transition-duration: 4s;
+  stroke-width: 1.2em;
+
+  &.fast {
+    transition-duration: .5s;
+  }
+}

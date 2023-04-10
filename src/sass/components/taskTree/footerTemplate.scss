@@ -1,0 +1,26 @@
+.footer-template {
+  position: relative;
+ 
+  background: #646464;
+  padding: 15px 0;
+  color: $light-font-color;
+
+  @media (min-width: 1024px) {
+    z-index: 200;
+  }
+
+  @media (min-width: 639px) {
+    flex: 0 0 auto;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 12px;
+  }
+}

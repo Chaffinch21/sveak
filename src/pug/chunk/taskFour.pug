@@ -1,0 +1,20 @@
+section.page
+  .container.page__container
+    h2.visually-hidden Задание 4
+    .page__wrap
+      button.page__button.button(type="button")
+        span.button__text.button__text--one Включить
+      button.page__button.button(type="button")
+        span.button__text.button__text--two Очень много текста
+      button.page__button.button(type="button")
+        span.button__text.button__text--three Выключить
+    .page__forms.form
+      form.page__form.form__one
+        input.form__input(type='text' placeholder="текст для первой кнопки")
+        button.form__btn(type='submit') Отправить
+      form.page__form.form__two(onsubmit="return false")
+        input.form__input(type='text' placeholder="текст для второй кнопки")
+        button.form__btn(type='submit') Отправить
+      form.page__form.form__three(onsubmit="return false")
+        input.form__input(type='text' placeholder="текст для третей кнопки")
+        button.form__btn(type='submit') Отправить

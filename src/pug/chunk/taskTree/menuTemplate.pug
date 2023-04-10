@@ -1,0 +1,7 @@
+- var Navigation = [{name: 'Каталог', href: '#', active: 'active'}, {name: 'О нас', href: '#', active: ''}, {name: 'Контакты', href: '#', active: ''}, {name: 'Галерея', href: '#', active: ''}, {name: 'На главную', href:'index.html', active: ''}]
+.menu-template
+  nav.menu-template__navigation.navigation
+    ul.navigation__list
+      each item in Navigation
+        li.navigation__item(class=item.active)
+          a.navigation__link(href=item.href)= item.name

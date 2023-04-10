@@ -1,0 +1,17 @@
+header.header-template
+  .container-template.header-template__container
+    nav.header-template__user.user
+      ul.user__list
+        li.user__item
+          a.user__link(href="#" aria-label="оповещения")
+            svg.user__svg.user__svg--bell
+              use(xlink:href="img/sprite.svg#bell")
+        li.user__item
+          a.user__link(href="#" aria-label="личный кабинет")
+            svg.user__svg.user__svg--login
+              use(xlink:href="img/sprite.svg#user")
+        li.user__item
+          a.user__link(href="#" aria-label="корзина")
+            span.user__count 0
+            svg.user__svg.user__svg--card
+              use(xlink:href="img/sprite.svg#card")

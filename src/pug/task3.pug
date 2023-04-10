@@ -1,0 +1,19 @@
+extends layout/app 
+
+block page
+  .wrap
+    .header-wrap
+      button.header-burger.burger.burger-js(type="button" aria-label="Открыть меню")
+        span.burger__line
+        span.burger__line
+        span.burger__line
+    include chunk/taskTree/headerTemplate
+  
+    main.main-template
+      .container-template.main-template__container
+        include chunk/taskTree/menuTemplate
+        include chunk/taskTree/mainTemplate
+
+    include chunk/taskTree/footerTemplate
+
+

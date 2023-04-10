@@ -1,0 +1,12 @@
+@import "fonts"; 
+@import "vars";
+@import "mixins";
+@import "settings";
+@import "./components/header";
+@import "./components/taskOne";
+@import "./components/taskTwo";
+@import "./components/taskFour";
+@import "./components/taskTree/headerTemplate";
+@import "./components/taskTree/menuTemplate";
+@import "./components/taskTree/mainTemplate";
+@import "./components/taskTree/footerTemplate";

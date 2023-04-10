@@ -1,0 +1,21 @@
+section.progress
+  .container.progress__container
+    h2.visually-hidden Задание 2
+    .progress__wrap
+      .progress__circle(data-pct="0"  id="cont")
+        svg.progress__svg(id="svg" width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg")
+          linearGradient(id="myGradient1")
+            stop(offset="0%" stop-color="#fcaaff")
+            stop(offset="100%" stop-color="#8300EA")
+          linearGradient(id="myGradient2")
+            stop(offset="0%" stop-color="#fcaaff")
+            stop(offset="100%" stop-color="#FB2799")
+          //- circle.progress__gradient( r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0" stroke="url(#myGradient)") 
+          svg(width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke-dasharray="565.48" stroke-dashoffset="0")
+            g(fill="none" stroke-width="19")
+              circle.progress__gradient( r="90" cx="100" cy="100" fill="transparent" stroke="url(#myGradient1)")
+              path(d="M10,100a90,90 0 1,0 180,0" stroke="url(#myGradient2)" )
+          circle.progress__background(id="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0")
+    button.progress__btn Перезапустить
+    label.progress__label(for="percent") Введите процент от 0 до 100:
+    input.progress__input(id="percent" name="percent" value="69")

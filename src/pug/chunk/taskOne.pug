@@ -1,0 +1,13 @@
+-var List = [{name: 'The Weekend', value:'20000 рублей'}, {name: 'Bruno Mars', value:'40 рублей'}, {name: 'Moby', value:'100 рублей'}, {name: 'Sea of Love - 1959, (John Phillip Baptiste (aka Phil Phillips) and George Khoury)', value:'150 рублей'}]
+section.price
+  .container.price__container
+    h2.visually-hidden Задание 1
+    .price__wrap
+      .price__grad
+        dl.propertys.price-propertys
+          each item in List
+            .propertys__inner.price-propertys__inner
+              dt.propertys__key.price-propertys__key
+                span.propertys__name.price-propertys__name= item.name
+                span.propertys__dotted.price-propertys__dotted
+              dd.propertys__value.price-propertys__value= item.value
